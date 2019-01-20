@@ -51,6 +51,6 @@
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1"
   },"engines": {
-    "node": "10.x"
+    "node": "8.x"
   }
 }
