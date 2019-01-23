@@ -1,6 +1,18 @@
-var app = require('./app.js');
+
 var debug = require('debug')('mean-app:server');
 var http = require('http');
+var express = require('express');
+var path = require('path');
+var bodyParser = require('body-parser');
+var server = http.createServer(app);
+var app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({'extended':'false'}));
+
+//Put your angular dist folder here
+app.use(express.static(path.join(__dirname, 'dist/angular7demo')));
+
 function normalizePort(val) {
    var port = parseInt(val, 10);
 
@@ -20,8 +32,11 @@ app.set('port', port);
 
   res.send({"test":"test"})
  }) 
+ app.get('*', function response(req, res) {
+  
+    res.sendFile(path.join(__dirname, 'dist/angular7demo/index.html'));
+  });
 
-var server = http.createServer(app);
 server.listen(port);
 server.on('listening', onListening);
 

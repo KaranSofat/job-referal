@@ -14,6 +14,7 @@ import { CandidateResumeComponent } from './candidate-resume/candidate-resume.co
 import { HeaderComponent } from './header/header.component';
 import { ListReferalsComponent } from './list-referals/list-referals.component';
 import { CompaniesListComponent } from './companies-list/companies-list.component';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -48,6 +49,10 @@ const appRoutes: Routes = [
     path: 'listCompanies',
     component: CompaniesListComponent,
   },
+   {
+    path: 'companyDetails',
+    component: CompanyDetailComponent,
+  },
 
 
 
@@ -71,7 +76,8 @@ const appRoutes: Routes = [
     CandidateResumeComponent,
     HeaderComponent,
     ListReferalsComponent,
-    CompaniesListComponent
+    CompaniesListComponent,
+    CompanyDetailComponent
   ],
   imports: [
     BrowserModule,
