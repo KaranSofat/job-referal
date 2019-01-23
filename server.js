@@ -37,10 +37,6 @@ app.set('port', port);
     res.sendFile(path.join(__dirname, 'dist/angular7demo/index.html'));
   });
 
-server.listen(port);
-server.on('listening', onListening);
-
-function onListening() {
-  var addr = server.address();
-  console.log('Listening on ' + port);
-}
+http.createServer(app).listen(port, function() {
+    console.log('Express server listening on port ' + port);
+});

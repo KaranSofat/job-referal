@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { headerComponent } from './../header/header.component';
 @Component({
   selector: 'app-companies-list',
   templateUrl: './companies-list.component.html',
@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CompaniesListComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit() {
+ngOnInit() {
+  
   }
-
+  
 }

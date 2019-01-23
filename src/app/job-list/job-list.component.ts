@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { headerComponent } from './../header/header.component';
 @Component({
   selector: 'app-job-list',
   templateUrl: './job-list.component.html',
@@ -11,17 +11,9 @@ export class JobListComponent implements OnInit {
 
  ngOnInit(){
    
-     this.loadScript('./../../assets/js/select-chosen.js');
+    
 	
 	}
  
-  public loadScript(url: string) {
-    const body = <HTMLDivElement> document.body;
-    const script = document.createElement('script');
-    script.innerHTML = '';
-    script.src = url;
-    script.async = false;
-    script.defer = true;
-    body.appendChild(script);
-  }
+ 
 }
